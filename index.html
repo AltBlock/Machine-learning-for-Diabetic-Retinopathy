@@ -1,0 +1,72 @@
+<!------------------- From Bootstrap -------------------------------------->\
+
+{% load staticfiles %}
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Semantic Question Matching</title>
+
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'font-awesome-4.7.0/css/font-awesome.min.css' %}">
+    <link rel = "stylesheet" href="{% static 'css/stylesheet.css' %}">
+    <link rel="stylesheet" href="{% static 'css/animate.min.css' %}">
+    </head>
+  <body>
+
+<!--------------------NAVIGATION----------------------------->
+
+
+<!---------------------------      searching the hostel---------------------->
+      <form method="GET" action="{% url 'searchlist' %}">
+      <div id="search" class="search">
+          <div class="container">
+              <div class="row">
+                  <h2 class="wow fadeInUp">Select Image</h2>
+                  <p class="wow fadeInUp" data-wow-delay="0.4s">Input two questions</p>
+
+                  <div class="col-lg-5 col-md-5 wow bounceInLeft" data-wow-delay="0.3s">
+                    <div class="input-group input-group-lg wow fadeInUp" data-wow-delay="0.8s">
+                        <span class="input-group-addon" id-sizing-addon1><i class="fa fa-question" aria hidden="true"></i></span>
+                        <input type="file" name="img" value="fileupload" id="fileupload">
+                        <label for="fileupload"> Select a file to upload</label>
+                    </div>
+                  </div>
+
+                  <div class="col-lg-2 col-md-2 wow bounceInRight" data-wow-delay="0.8s" >
+                      <button class="btn btn-lg wow fadeInUp" data-wow-delay="2.4s" type="submit">Search</button>
+                  </div>
+
+
+
+
+              </div>
+          </div>
+      </div>
+
+
+
+
+
+      </form>
+
+<!---------------------------      End of searching the hostel---------------------->
+
+
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+
+<!-- -------------     this is for the animation-->
+      <script src="{% static 'js/wow.min.js' %}"></script>
+    <script>
+        new WOW().init();
+    </script>
+<!-------------ed animation------------------->
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+  </body>
+</html>
